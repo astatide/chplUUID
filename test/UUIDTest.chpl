@@ -1,11 +1,11 @@
 config const testParam: bool = true;
 
-use chplUUID;
+use UUID;
 
 if testParam {
 
-  var UUID = new owned chplUUID.UUID();
-  var id = UUID.UUID4(); // id is a v4 UUID
+  var uuid = new owned UUID.UUIDGenerator();
+  var id = uuid.UUID4(); // id is a v4 UUID
   writeln('ID %s successfully generated!'.format(id));
 
 }

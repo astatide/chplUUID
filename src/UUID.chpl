@@ -8,13 +8,13 @@
 
   ::
 
-    use chplUUID;
-    var UUID = new owned chplUUID.UUID();
-    var id = UUID.UUID4(); // id is a v4 UUID
+    use UUID;
+    var uuid = new owned UUID.UUIDGenerator();
+    var id = uuid.UUID4(); // id is a v4 UUID
 
 
  */
-module chplUUID {
+module UUID {
 
   // By Audrey Pratt, care of Cray
 
@@ -35,7 +35,7 @@ module chplUUID {
 
   */
 
-  class UUID {
+  class UUIDGenerator {
     // This is a generic class which will be able to output a UUID4 compliant ID
     // (I mean, that's the goal, anyway; who knows if I'm doing it right).
     // We want our random stuff, so.
